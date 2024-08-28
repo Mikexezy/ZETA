@@ -4,5 +4,4 @@ include
 lib
 share
 pyvenv.cfg
-.gitignore
 .DS_Store
