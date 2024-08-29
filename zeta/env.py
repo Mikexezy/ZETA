@@ -1,10 +1,15 @@
 from road import Road
 from node import Node
+from trafficGen import Traffic
 
-strada1 = Road(2, 5, [0, 0])
-strada2 = Road(1, 5, 0)
+class Enviroement:
 
-node1 = Node([strada1, strada2], True)
+    strada1 = Road(2, 5, [0, 0])
+    strada2 = Road(1, 5, 0)
 
-for stoplight in node1.stoplight:
-    print(stoplight.state)
+    node1 = Node([strada1, strada2], True)
+
+    traffic = Traffic([strada1, strada2], 0.2)
+    traffic.start()
+
+    
